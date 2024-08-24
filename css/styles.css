@@ -4387,6 +4387,84 @@ input[type="button"].btn--primary:focus {
 }
 
 
+/* Project Cards Styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(5px); /* Add a blur effect for better readability */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.project-name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 7.5rem;
+}
+
+.github-link {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.github-icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* White icon for dark background */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .github-link {
+        bottom: 0.5rem;
+    }
+}
+
+
+
 /* ===================================================================
  * # contact
  *
